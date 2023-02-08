@@ -1,0 +1,3 @@
+module Api::WeatherHelper
+
+end

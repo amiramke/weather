@@ -1,0 +1,26 @@
+<%= javascript_include_tag "home", "data-turbo-track": "reload" %>
+<%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
+
+<div class="container mt-5" id="weather-view">
+  <h1 class="text-center">Get Weather Information</h1>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="address"></label>
+        <input type="text" class="form-control" id="address" placeholder="Enter address, City, Zipcode, IP">
+      </div>
+      <button id="submit" class="btn btn-primary btn-block">Submit</button>
+      <div id="daily-forecast" class="mt-5"> </div>
+      <table id="forecast-table" class="table table-striped" style="display: none;">
+        <thead class="thead-dark">
+          <tr>
+            <th>Date</th>
+            <th>Low Temperature</th>
+            <th>High Temperature</th>
+          </tr>
+        </thead>
+        <tbody id="forecast-data">
+        </tbody>
+      </table>
+  </div>
+</div>
