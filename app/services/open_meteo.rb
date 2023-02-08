@@ -4,7 +4,6 @@ class OpenMeteo
   end
 
   def url(latitude, longitude)
-    # "https://api.open-meteo.com/v1/forecast?latitude=#{latitude}&longitude=#{longitude}&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=auto"
     "https://api.open-meteo.com/v1/forecast?latitude=#{latitude}&longitude=#{longitude}&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=auto"
   end
 
@@ -22,8 +21,6 @@ class OpenMeteo
         context.fetch_data
       end
 
-    p 'JSON.parse(data)'
-    p JSON.parse(data)
     current_weather = JSON.parse(data)["current_weather"]
     daily_forecast = JSON.parse(data)["daily"]
 

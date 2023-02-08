@@ -7,8 +7,6 @@ class Api::WeatherController < ApplicationController
       return
     end
 
-    # results = Geocoder.search(params[:address])
-    # coordinates = results.first.coordinates
     location = Location.new(params[:address])
     coordinates = location.coordinates
 
